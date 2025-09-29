@@ -98,7 +98,7 @@ export const PlatformData = [
   },
 ];
 export const navLinks = [
-  { label: 'TMS solutions', href: '#' },
+  { label: 'TMS solutions', href: '#solutions' },
   { label: 'Resources', href: '#' },
   { label: 'Pricing', href: '#' },
   { label: 'Contact Us', href: '#' },

@@ -26,7 +26,7 @@ const WhyInstalanes = () => {
           sx={{
             display: 'grid',
             gap: 3,
-            mt: 6,
+            my: 6,
             gridTemplateColumns: {
               xs: '1fr',
               sm: 'repeat(2, 1fr)',

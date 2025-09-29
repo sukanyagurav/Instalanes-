@@ -5,7 +5,6 @@ import {
   Button,
   Drawer,
   IconButton,
-  Link,
   List,
   ListItem,
   ListItemText,
@@ -19,7 +18,14 @@ import ContainerHolder from './UI/Container';
 import { flexAlignCenter } from './styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { navLinks } from './constants/constant';
+import Link from 'next/link';
+import styled from '@emotion/styled';
 
+const MyLinks = styled(Link)(() => ({
+  textDecoration: 'none',
+  color: 'white',
+  
+}));
 const NavBar = () => {
   const isMobile = useMediaQuery('@media (max-width: 900px)');
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -44,7 +50,7 @@ const NavBar = () => {
                 anchor="top"
                 open={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
-              > 
+              >
                 <List sx={{ width: 220, p: 3 }}>
                   {navLinks.map((link) => (
                     <ListItem
@@ -53,13 +59,7 @@ const NavBar = () => {
                       onClick={() => setDrawerOpen(false)}
                     >
                       <ListItemText>
-                        <Link
-                          href={link.href}
-                          underline="none"
-                          color="inherit"
-                        >
-                          {link.label}
-                        </Link>
+                        <MyLinks href={link.href}>{link.label}</MyLinks>
                       </ListItemText>
                     </ListItem>
                   ))}
@@ -70,7 +70,6 @@ const NavBar = () => {
                   startIcon={<ComputerIcon />}
                   sx={{
                     borderRadius: 0,
-
                     py: 0.8,
                     width: '100%',
                   }}
@@ -82,15 +81,12 @@ const NavBar = () => {
           ) : (
             <Box sx={flexAlignCenter}>
               {navLinks.map((link) => (
-                <Link
+                <MyLinks
                   key={link.label}
                   href={link.href}
-                  underline="none"
-                  color="inherit"
-                  sx={{ fontWeight: 500 }}
                 >
                   {link.label}
-                </Link>
+                </MyLinks>
               ))}
               <Button
                 variant="contained"
@@ -100,14 +96,12 @@ const NavBar = () => {
                   borderRadius: 0,
                   marginLeft: 'auto',
                   py: 0.8,
-                 
                 }}
               >
                 Get Demo
               </Button>
             </Box>
           )}
-        
         </Toolbar>
       </ContainerHolder>
     </AppBar>

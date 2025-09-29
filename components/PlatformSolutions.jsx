@@ -8,7 +8,7 @@ import { fontSize, margin_sm } from './styles';
 
 const PlatformSolutions = () => {
   return (
-    <section style={{ backgroundColor: '#F5F5F5' }}>
+    <section style={{ backgroundColor: '#F5F5F5' }} id="solutions">
       <ContainerHolder>
         <Typography
           variant="h5"

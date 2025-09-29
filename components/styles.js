@@ -14,7 +14,7 @@ export const flexJustifyBetween = {
 };
 
 export const margin_sm = {
-  my: 2,
+  my:3,
 };
 
 export const containerStyle={
@@ -23,4 +23,8 @@ export const containerStyle={
 
 export const fontSize={
      fontSize:'1.8em'
+}
+export const links={
+  textDecoration: 'none',
+  color: 'white'
 }
