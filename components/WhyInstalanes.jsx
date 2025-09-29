@@ -4,7 +4,7 @@ import { whys } from './constants/constant';
 
 const WhyInstalanes = () => {
   return (
-    <section style={{ background: '#f5f5f5' }}>
+    <Box sx={{ background: '#f5f5f5' }}>
       <Container
         maxWidth="lg"
         sx={{
@@ -54,7 +54,7 @@ const WhyInstalanes = () => {
           ))}
         </Box>
       </Container>
-    </section>
+    </Box>
   );
 };
 

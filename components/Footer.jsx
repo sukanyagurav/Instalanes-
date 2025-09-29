@@ -1,11 +1,21 @@
 import React from 'react';
-import { Box, Container, Link, List, ListItemText, Typography } from '@mui/material';
+import {
+  Box,
+  Container,
+  Link,
+  List,
+  ListItemText,
+  Typography,
+} from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { footerLinks } from './constants/constant';
 
 const Footer = () => {
   return (
-    <footer style={{ background: 'black', color: 'white' }}>
+    <Box
+      component="footer"
+      sx={{ backgroundColor: 'black', color: 'white', mt: 4 }}
+    >
       <Container
         maxWidth="lg"
         sx={{
@@ -82,7 +92,7 @@ const Footer = () => {
           </Typography>
         </Box>
       </Container>
-    </footer>
+    </Box>
   );
 };
 

@@ -6,8 +6,8 @@ import { PlatformData } from './constants/constant';
 
 const PlatformSolutions = () => {
   return (
-    <section
-      style={{ backgroundColor: '#F5F5F5' }}
+    <Box
+      sx={{ backgroundColor: '#F5F5F5' }}
       id="solutions"
     >
       <Container
@@ -31,12 +31,10 @@ const PlatformSolutions = () => {
           Instalanes digitizes your entire transportation process, solving real
           industry challenges
         </Typography>
-        <Image
+        <Box
           src="/Instalanes-TMS-Process.svg"
-          alt="Platform Solutions"
-          width={500}
-          height={500}
-          style={{ objectFit: 'contain', width: '100%' }}
+          component="img"
+          sx={{ width: { xs: '100%' } }}
         />
         <Box
           sx={{
@@ -97,7 +95,7 @@ const PlatformSolutions = () => {
           ))}
         </Box>
       </Container>
-    </section>
+    </Box>
   );
 };
 
