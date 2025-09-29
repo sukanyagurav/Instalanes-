@@ -3,6 +3,7 @@ import {
   AppBar,
   Box,
   Button,
+  Container,
   Drawer,
   IconButton,
   List,
@@ -14,8 +15,6 @@ import {
 import React, { useState } from 'react';
 import Logo from './Logo';
 import ComputerIcon from '@mui/icons-material/Computer';
-import ContainerHolder from './UI/Container';
-import { flexAlignCenter } from './styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { navLinks } from './constants/constant';
 import Link from 'next/link';
@@ -24,15 +23,20 @@ import styled from '@emotion/styled';
 const MyLinks = styled(Link)(() => ({
   textDecoration: 'none',
   color: 'white',
-  
 }));
 const NavBar = () => {
   const isMobile = useMediaQuery('@media (max-width: 900px)');
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <AppBar sx={{ backgroundColor: 'black' }}>
-      <ContainerHolder>
+    <AppBar >
+      <Container
+        maxWidth="lg"
+        sx={{
+          p: 2,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
         <Toolbar>
           <Logo />
 
@@ -79,7 +83,14 @@ const NavBar = () => {
               </Drawer>
             </>
           ) : (
-            <Box sx={flexAlignCenter}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 2,
+                flexGrow: 1,
+              }}
+            >
               {navLinks.map((link) => (
                 <MyLinks
                   key={link.label}
@@ -103,7 +114,7 @@ const NavBar = () => {
             </Box>
           )}
         </Toolbar>
-      </ContainerHolder>
+      </Container>
     </AppBar>
   );
 };

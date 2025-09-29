@@ -1,14 +1,13 @@
 import { Link, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import { flexAlignCenter } from './styles';
 
 const Logo = () => {
   return (
     <Link
       href="/"
       aria-label="logo"
-      sx={flexAlignCenter}
+      sx={{ display: 'flex', alignItems: 'center', gap: 2, flexGrow: 1 }}
       underline="none"
     >
       <Image

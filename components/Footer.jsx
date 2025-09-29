@@ -1,14 +1,18 @@
 import React from 'react';
-import ContainerHolder from './UI/Container';
-import { Box, Link, List, ListItemText, Typography } from '@mui/material';
+import { Box, Container, Link, List, ListItemText, Typography } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import { margin_sm } from './styles';
 import { footerLinks } from './constants/constant';
 
 const Footer = () => {
   return (
     <footer style={{ background: 'black', color: 'white' }}>
-      <ContainerHolder>
+      <Container
+        maxWidth="lg"
+        sx={{
+          p: 2,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
         <Typography
           variant="h5"
           color="white"
@@ -48,7 +52,7 @@ const Footer = () => {
               </Typography>
               <List sx={{ listStyle: 'none', p: 0, m: 0 }}>
                 {section.links.map((link) => (
-                  <ListItemText key={link} >
+                  <ListItemText key={link}>
                     <Link
                       href="#"
                       underline="none"
@@ -68,7 +72,7 @@ const Footer = () => {
             </Box>
           ))}
         </Box>
-        <Box sx={margin_sm} >
+        <Box sx={{ my: 3 }}>
           <Typography
             variant="body1"
             sx={{ textAlign: { xs: 'center', sm: 'left' } }}
@@ -76,9 +80,8 @@ const Footer = () => {
             Copyright © {new Date().getFullYear()} Instalanes.com. All rights
             reserved.
           </Typography>
-         
         </Box>
-      </ContainerHolder>
+      </Container>
     </footer>
   );
 };

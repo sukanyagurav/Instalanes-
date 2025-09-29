@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import React from 'react';
-import { fontSize, margin_sm } from './styles';
+
 import { stepper } from './constants/constant';
 
 const Steps = () => {
@@ -17,7 +17,7 @@ const Steps = () => {
         </Typography>
         <Typography
           variant="h4"
-           sx={{...margin_sm,...fontSize}}
+           sx={{ my:3,fontSize:'1.8em'}}
         >
           Simplify and digitize FCL, FTL, PTL, ODC, and warehouse shipments with
           a unified TMS for Shippers, Carriers, 3PLs, and LSPs

@@ -1,14 +1,17 @@
-import { Box, Card, Typography } from '@mui/material';
+import { Box, Card, Container, Typography } from '@mui/material';
 import React from 'react';
-import { fontSize, margin_sm } from './styles';
-import ContainerHolder from './UI/Container';
 import { whys } from './constants/constant';
-
 
 const WhyInstalanes = () => {
   return (
     <section style={{ background: '#f5f5f5' }}>
-      <ContainerHolder>
+      <Container
+        maxWidth="lg"
+        sx={{
+          p: 2,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
         <Typography
           variant="h5"
           color="primary"
@@ -17,7 +20,7 @@ const WhyInstalanes = () => {
         </Typography>
         <Typography
           variant="h4"
-         sx={{...margin_sm,...fontSize}}
+          sx={{ my: 3, fontSize: '1.8em' }}
         >
           Instalanes is a Collaborative TMS platform that helps Business leaders
           generate real business outcomes, they care for!
@@ -42,7 +45,7 @@ const WhyInstalanes = () => {
               <Typography variant="h3">{why.quantity}</Typography>
               <Typography
                 variant="h6"
-                sx={margin_sm}
+                sx={{ my: 3 }}
               >
                 {why.title}
               </Typography>
@@ -50,7 +53,7 @@ const WhyInstalanes = () => {
             </Card>
           ))}
         </Box>
-      </ContainerHolder>
+      </Container>
     </section>
   );
 };

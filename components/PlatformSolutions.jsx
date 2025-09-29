@@ -1,25 +1,32 @@
 import React from 'react';
-import ContainerHolder from './UI/Container';
-import { Box, Card, CardContent, Typography } from '@mui/material';
+import { Box, Card, CardContent, Container, Typography } from '@mui/material';
 import Image from 'next/image';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { PlatformData } from './constants/constant';
-import { fontSize, margin_sm } from './styles';
 
 const PlatformSolutions = () => {
   return (
-    <section style={{ backgroundColor: '#F5F5F5' }} id="solutions">
-      <ContainerHolder>
+    <section
+      style={{ backgroundColor: '#F5F5F5' }}
+      id="solutions"
+    >
+      <Container
+        maxWidth="lg"
+        sx={{
+          p: 2,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
         <Typography
           variant="h5"
           color="primary"
-          sx={margin_sm}
+          sx={{ my: 3 }}
         >
           Digital TMS platform solutions
         </Typography>
         <Typography
           variant="h4"
-          sx={{ ...margin_sm, ...fontSize }}
+          sx={{ my: 3, fontSize: '1.8em' }}
         >
           Instalanes digitizes your entire transportation process, solving real
           industry challenges
@@ -89,7 +96,7 @@ const PlatformSolutions = () => {
             </Card>
           ))}
         </Box>
-      </ContainerHolder>
+      </Container>
     </section>
   );
 };

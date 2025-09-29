@@ -1,7 +1,6 @@
 import { Box, Button, Typography, Container, Backdrop } from '@mui/material';
 import React from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import ContainerHolder from './UI/Container';
 const Banner = () => {
   return (
     <Box
@@ -49,7 +48,11 @@ const Banner = () => {
         }}
         open
       ></Backdrop>
-      <ContainerHolder>
+      <Container  maxWidth="lg"
+      sx={{
+        p: 2,
+        px: { xs: 2, sm: 3, md: 4 },
+      }}>
         <Box
           sx={{
             p: 8,
@@ -93,7 +96,7 @@ const Banner = () => {
             Schedule a Demo
           </Button>
         </Box>
-      </ContainerHolder>
+      </Container>
     </Box>
   );
 };

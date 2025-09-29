@@ -1,12 +1,14 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-import ContainerHolder from './UI/Container';
+import { Container, Typography } from '@mui/material';
 import Features from './Features';
-import { fontSize, margin_sm } from './styles';
 
 const BigChallenge = () => {
   return (
-    <ContainerHolder>
+    <Container  maxWidth="lg"
+      sx={{
+        p: 2,
+        px: { xs: 2, sm: 3, md: 4 },
+      }}>
       <Typography
         variant="h5"
         color="primary"
@@ -15,14 +17,14 @@ const BigChallenge = () => {
       </Typography>
       <Typography
         variant="h4"
-        sx={{...margin_sm,...fontSize}}
+        sx={{  my:3, fontSize:'1.8em'}}
        
       >
         Simplifying the complex manual chaos, digitally
       </Typography>
       <Typography
         variant="h5"
-         sx={{...margin_sm,...fontSize}}
+         sx={{  my:3, fontSize:'1.8em'}}
       
         fontWeight={'bold'}
       >
@@ -30,7 +32,7 @@ const BigChallenge = () => {
       </Typography>
       <Typography
         variant="body1"
-        sx={margin_sm}
+        sx={{my:3}}
       >
         Efficient and visible supply chain management is the goal of every
         business leader. Having a clear understanding of the supply chain and
@@ -55,7 +57,7 @@ const BigChallenge = () => {
         imgSrc="/feature2.png"
         classes={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
       />
-    </ContainerHolder>
+    </Container>
   );
 };
 

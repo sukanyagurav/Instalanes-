@@ -2,7 +2,6 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import { flexJustifyBetween, margin_sm, useImage } from './styles';
 
 const Features = ({ title, imgSrc, paragraphs, classes }) => {
   return (
@@ -10,8 +9,11 @@ const Features = ({ title, imgSrc, paragraphs, classes }) => {
       sx={{
         my: 4,
         ...classes,
-        ...flexJustifyBetween,
-        gap: 4,
+       
+        gap: 4, display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 1,
       }}
     >
       <Box sx={{ width: { xs: '100%', md: '100%' } }}>
@@ -34,7 +36,7 @@ const Features = ({ title, imgSrc, paragraphs, classes }) => {
         {paragraphs.map((para, index) => (
           <Typography
             variant="body1"
-            sx={margin_sm}
+            sx={{my:3}}
             key={`feature + ${index}`}
           >
             {para}
